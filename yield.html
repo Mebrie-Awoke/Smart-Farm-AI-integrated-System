@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Prediction - Smart Farm</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-leaf"></i> Smart Farm</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommend.html">Recommend Crop</a></li>
+                <li><a href="/fertilizer.html">Fertilizer</a></li>
+                <li><a href="/yield.html">Crop Yield</a></li>
+                <li><a href="/disease.html">Disease</a></li>
+                <li><a href="/climate.html">Climate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="section-title-center reveal">
+            <h2>Crop Yield Prediction</h2>
+        </div>
+        <div class="form-container reveal">
+            <form id="yield-form">
+                <div class="form-group">
+                    <label>Rainfall (mm)</label>
+                    <input type="number" name="rainfall" class="form-control" required value="1626">
+                </div>
+                <div class="form-group">
+                    <label>Soil Quality Index</label>
+                    <input type="number" name="soil_quality" class="form-control" required value="9">
+                </div>
+                <div class="form-group">
+                    <label>Farm Size (Hectares)</label>
+                    <input type="number" name="farm_size" class="form-control" required value="636">
+                </div>
+                <div class="form-group">
+                    <label>Sunlight Hours</label>
+                    <input type="number" name="sunlight" class="form-control" required value="11">
+                </div>
+                <div class="form-group">
+                    <label>Fertilizer Used (Kg)</label>
+                    <input type="number" name="fertilizer_amount" class="form-control" required value="1006">
+                </div>
+                <button type="submit" class="btn-submit">Predict Yield</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Smart Farm</h3>
+                <p>Revolutionizing agriculture with AI-driven insights for better yields and sustainable farming.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="/recommend.html"><i class="fas fa-chevron-right"></i> Crop Recommendation</a></li>
+                    <li><a href="/fertilizer.html"><i class="fas fa-chevron-right"></i> Fertilizer Guide</a></li>
+                    <li><a href="/disease.html"><i class="fas fa-chevron-right"></i> Disease Detection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> mebrie824@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +251922545447</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Arat Kilo, Addis Ababa , Ethiopia</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Smart Farm Intelligence. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Recommendation - Smart Farm</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-leaf"></i> Smart Farm</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommend.html">Recommend Crop</a></li>
+                <li><a href="/fertilizer.html">Fertilizer</a></li>
+                <li><a href="/yield.html">Crop Yield</a></li>
+                <li><a href="/disease.html">Disease</a></li>
+                <li><a href="/climate.html">Climate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="section-title-center reveal">
+            <h2>Fertilizer Recommendation</h2>
+            <p>Get AI-powered fertilizer recommendations based on your soil composition and crop type.</p>
+        </div>
+
+        <!-- Soil Image Section -->
+        <div class="section-title-center m-bottom-30 reveal">
+            <img src="/api/images/soil.jpg" alt="Soil Analysis" class="hero-img"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=400&fit=crop'">
+        </div>
+
+        <div class="form-container reveal">
+            <form id="fertilizer-form">
+                <div class="form-group">
+                    <label>Temperature (°C)</label>
+                    <input type="number" step="0.1" name="temperature" class="form-control" required value="26.0">
+                </div>
+                <div class="form-group">
+                    <label>Humidity (%)</label>
+                    <input type="number" step="0.1" name="humidity" class="form-control" required value="52.0">
+                </div>
+                <div class="form-group">
+                    <label>Moisture</label>
+                    <input type="number" step="0.1" name="moisture" class="form-control" required value="38.0">
+                </div>
+                <div class="form-group">
+                    <label>Soil Type</label>
+                    <select name="soil_type" class="form-control">
+                        <option value="Sandy">Sandy</option>
+                        <option value="Loamy">Loamy</option>
+                        <option value="Black">Black</option>
+                        <option value="Red">Red</option>
+                        <option value="Clayey">Clayey</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Crop Type</label>
+                    <select name="crop_type" class="form-control">
+                        <option value="Maize">Maize</option>
+                        <option value="Sugarcane">Sugarcane</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Tobacco">Tobacco</option>
+                        <option value="Paddy">Paddy</option>
+                        <option value="Barley">Barley</option>
+                        <option value="Wheat">Wheat</option>
+                        <option value="Millets">Millets</option>
+                        <option value="Oil seeds">Oil seeds</option>
+                        <option value="Pulses">Pulses</option>
+                        <option value="Ground Nuts">Ground Nuts</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nitrogen (N)</label>
+                    <input type="number" name="nitrogen" class="form-control" required value="37">
+                </div>
+                <div class="form-group">
+                    <label>Potassium (K)</label>
+                    <input type="number" name="potassium" class="form-control" required value="0">
+                </div>
+                <div class="form-group">
+                    <label>Phosphorous (P)</label>
+                    <input type="number" name="phosphorous" class="form-control" required value="0">
+                </div>
+                <button type="submit" class="btn-submit">Get Recommendation</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Smart Farm</h3>
+                <p>Revolutionizing agriculture with AI-driven insights for better yields and sustainable farming.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="/recommend.html"><i class="fas fa-chevron-right"></i> Crop Recommendation</a></li>
+                    <li><a href="/fertilizer.html"><i class="fas fa-chevron-right"></i> Fertilizer Guide</a></li>
+                    <li><a href="/disease.html"><i class="fas fa-chevron-right"></i> Disease Detection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> mebrie824@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +251922545447</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Arat Kilo, Addis Ababa , Ethiopia</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Smart Farm Intelligence. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

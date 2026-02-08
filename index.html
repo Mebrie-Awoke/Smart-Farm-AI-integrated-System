@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farm System</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-leaf"></i> Smart Farm</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommend.html">Recommend Crop</a></li>
+                <li><a href="/fertilizer.html">Fertilizer</a></li>
+                <li><a href="/yield.html">Crop Yield</a></li>
+                <li><a href="/disease.html">Disease</a></li>
+                <li><a href="/climate.html">Climate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="hero reveal">
+            <h1>Welcome to Smart Farm Intelligence</h1>
+            <p>Leveraging AI and Data Science to revolutionize agriculture.</p>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <div class="container gallery-section reveal">
+            <div id="image-gallery" class="image-gallery"></div>
+        </div>
+
+        <!-- Integrated Crop Guide Section -->
+        <div class="crop-guide-section reveal">
+            <div class="section-title-center">
+                <h2><i class="fas fa-book-open"></i> Crop Cultivation Guide</h2>
+                <p>Enter a crop name (e.g., Rice, Wheat, Cotton) to get detailed advice and tips.</p>
+            </div>
+
+            <div class="guide-search">
+                <div class="search-box">
+                    <input type="text" id="cropInput" placeholder="Search for a crop..."
+                        onkeypress="handleEnter(event)">
+                    <button class="search-btn" onclick="searchCrop()"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div id="loading">
+                <i class="fas fa-spinner fa-spin fa-2x spinner-icon"></i>
+            </div>
+
+            <div id="resultContainer" class="guide-result">
+                <div class="guide-header">
+                    <div class="guide-crop-header">
+                        <h2 id="cropName">Crop Name</h2>
+                        <small id="sciName">Scientific Name</small>
+                    </div>
+                    <i class="fas fa-seedling fa-2x"></i>
+                </div>
+
+                <div class="guide-body">
+                    <p id="cropDesc" class="guide-description"></p>
+
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h4><i class="fas fa-thermometer-half"></i> Ideal Conditions</h4>
+                            <ul class="tips-list" id="conditionsList"></ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h4><i class="fas fa-hand-holding-water"></i> Planting</h4>
+                            <ul class="tips-list" id="plantingList"></ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h4><i class="fas fa-heart"></i> Care & Maintenance</h4>
+                            <ul class="tips-list" id="careList"></ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h4><i class="fas fa-virus"></i> Diseases & Pests</h4>
+                            <ul class="tips-list" id="diseaseList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errorMsg" class="result error-msg"></div>
+        </div>
+
+        <div class="features reveal">
+            <div class="feature-card">
+                <i class="fas fa-seedling fa-3x feature-icon"></i>
+                <h3>Fertilizer Recommendation</h3>
+                <p>Get AI-powered recommendations for the best fertilizer based on your soil composition.</p>
+                <a href="/fertilizer.html" class="feature-btn">Get Recommendation</a>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-chart-line fa-3x feature-icon"></i>
+                <h3>Yield Prediction</h3>
+                <p>Predict your harvest yield based on environmental factors and farm usage.</p>
+                <a href="/yield.html" class="feature-btn">Predict Yield</a>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-notes-medical fa-3x feature-icon"></i>
+                <h3>Disease Risk Analysis</h3>
+                <p>Analyze sensor data to detect potential crop disease risks early.</p>
+                <a href="/disease.html" class="feature-btn">Check Risks</a>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-cloud-sun-rain fa-3x feature-icon"></i>
+                <h3>Climate Insights</h3>
+                <p>Visualize climatic trends and their impact on agriculture over the years.</p>
+                <a href="/climate.html" class="feature-btn">View Trends</a>
+            </div>
+        </div>
+        <!-- Smart Farm Notes Section -->
+        <div class="notes-section reveal">
+            <div class="section-title-center">
+                <h2><i class="fas fa-lightbulb"></i> Smart Farm Insights</h2>
+                <p>Learn more about how technology is transforming modern agriculture.</p>
+            </div>
+            <div class="notes-grid">
+                <div class="note-card">
+                    <h3><i class="fas fa-hand-holding-seedling"></i> Sustainable Practices</h3>
+                    <p>Smart farming promotes sustainability by optimizing resource use. Through precision irrigation
+                        and targeted fertilization, farmers can reduce waste, maintain soil health, and ensure long-term
+                        environmental balance.</p>
+                </div>
+                <div class="note-card">
+                    <h3><i class="fas fa-brain"></i> AI-Driven Intelligence</h3>
+                    <p>Artificial Intelligence analyzes vast amounts of data—from weather patterns to soil chemistry—to
+                        provide actionable insights. This helps in early disease detection and predicting optimal
+                        harvest times.</p>
+                </div>
+                <div class="note-card">
+                    <h3><i class="fas fa-microchip"></i> The Future: IoT & Rural Connectivity</h3>
+                    <p>The integration of IoT sensors and automated machinery is bridging the gap between traditional
+                        farming and tech centers. Real-time monitoring allows farmers to manage their crops from
+                        anywhere in the world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Smart Farm</h3>
+                <p>Revolutionizing agriculture with AI-driven insights for better yields and sustainable farming.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="/recommend.html"><i class="fas fa-chevron-right"></i> Crop Recommendation</a></li>
+                    <li><a href="/fertilizer.html"><i class="fas fa-chevron-right"></i> Fertilizer Guide</a></li>
+                    <li><a href="/disease.html"><i class="fas fa-chevron-right"></i> Disease Detection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> mebrie824@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +251922545447</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Arat Kilo, Addis Ababa , Ethiopia</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Smart Farm Intelligence. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

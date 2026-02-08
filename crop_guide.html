@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Guide - Smart Farm</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .guide-search {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            border: 2px solid var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+
+        .search-box input:focus {
+            box-shadow: 0 6px 15px rgba(2, 132, 199, 0.2);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .guide-result {
+            display: none;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            animation: slideUp 0.5s ease;
+        }
+
+        .guide-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .guide-body {
+            padding: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .info-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .tips-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-leaf"></i> Smart Farm</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommend.html">Recommend Crop</a></li>
+                <li><a href="/fertilizer.html">Fertilizer</a></li>
+                <li><a href="/yield.html">Crop Yield</a></li>
+                <li><a href="/disease.html">Disease</a></li>
+                <li><a href="/climate.html">Climate</a></li>
+                <li><a href="/crop_guide.html" class="active">Crop Guide</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1><i class="fas fa-book-open"></i> Crop Cultivation Guide</h1>
+            <p>Enter a crop name (e.g., Rice, Wheat, Cotton) to get detailed advice and tips.</p>
+        </div>
+
+        <div class="guide-search">
+            <div class="search-box">
+                <input type="text" id="cropInput" placeholder="Search for a crop..." onkeypress="handleEnter(event)">
+                <button class="search-btn" onclick="searchCrop()"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <div id="loading" style="text-align: center; display: none;">
+            <i class="fas fa-spinner fa-spin fa-2x" style="color: var(--secondary-color);"></i>
+        </div>
+
+        <div id="resultContainer" class="guide-result">
+            <div class="guide-header">
+                <div>
+                    <h2 id="cropName" style="margin: 0;">Crop Name</h2>
+                    <small id="sciName" style="opacity: 0.9;">Scientific Name</small>
+                </div>
+                <i class="fas fa-seedling fa-2x"></i>
+            </div>
+
+            <div class="guide-body">
+                <p id="cropDesc" style="font-size: 1.1rem; color: #555; margin-bottom: 30px;"></p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4><i class="fas fa-thermometer-half"></i> Ideal Conditions</h4>
+                        <ul class="tips-list" id="conditionsList"></ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="fas fa-hand-holding-water"></i> Planting</h4>
+                        <ul class="tips-list" id="plantingList"></ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="fas fa-heart"></i> Care & Maintenance</h4>
+                        <ul class="tips-list" id="careList"></ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="fas fa-virus"></i> Diseases & Pests</h4>
+                        <ul class="tips-list" id="diseaseList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="errorMsg" class="result" style="background-color: #fee2e2; color: #991b1b; display: none;"></div>
+    </div>
+
+    <script>
+        function handleEnter(e) {
+            if (e.key === 'Enter') searchCrop();
+        }
+
+        async function searchCrop() {
+            const input = document.getElementById('cropInput');
+            const query = input.value.trim();
+            const resultDiv = document.getElementById('resultContainer');
+            const errorDiv = document.getElementById('errorMsg');
+            const loading = document.getElementById('loading');
+
+            if (!query) return;
+
+            loading.style.display = 'block';
+            resultDiv.style.display = 'none';
+            errorDiv.style.display = 'none';
+
+            try {
+                const response = await fetch(`/api/guide?crop=${encodeURIComponent(query)}`);
+                const data = await response.json();
+
+                loading.style.display = 'none';
+
+                if (response.ok) {
+                    // Populate UI
+                    document.getElementById('cropName').textContent = query.charAt(0).toUpperCase() + query.slice(1); // Simple capaitalize
+                    if (data.scientific_name) document.getElementById('sciName').textContent = data.scientific_name;
+                    document.getElementById('cropDesc').textContent = data.description;
+
+                    // Helper to fill lists
+                    const fillList = (id, items) => {
+                        const dl = document.getElementById(id);
+                        dl.innerHTML = '';
+                        if (Array.isArray(items)) {
+                            items.forEach(item => {
+                                const li = document.createElement('li');
+                                li.textContent = item;
+                                dl.appendChild(li);
+                            });
+                        } else if (typeof items === 'object') {
+                            for (const [key, val] of Object.entries(items)) {
+                                const li = document.createElement('li');
+                                li.innerHTML = `<strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${val}`;
+                                dl.appendChild(li);
+                            }
+                        } else {
+                            const li = document.createElement('li');
+                            li.textContent = items;
+                            dl.appendChild(li);
+                        }
+                    };
+
+                    fillList('conditionsList', data.ideal_conditions);
+                    fillList('plantingList', data.planting_tips);
+                    fillList('careList', data.care_maintenance);
+                    fillList('diseaseList', data.diseases);
+
+                    resultDiv.style.display = 'block';
+                } else {
+                    errorDiv.textContent = data.error || "Crop not found. Try Rice, Wheat, Maize, Cotton, etc.";
+                    errorDiv.style.display = 'block';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                errorDiv.textContent = "Connection error. Please try again.";
+                errorDiv.style.display = 'block';
+            }
+        }
+    </script>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Smart Farm</h3>
+                <p>Revolutionizing agriculture with AI-driven insights for better yields and sustainable farming.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="/recommend.html"><i class="fas fa-chevron-right"></i> Crop Recommendation</a></li>
+                    <li><a href="/fertilizer.html"><i class="fas fa-chevron-right"></i> Fertilizer Guide</a></li>
+                    <li><a href="/disease.html"><i class="fas fa-chevron-right"></i> Disease Detection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> mebrie824@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +251922545447</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Arat Kilo, Addis Ababa , Ethiopia</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Smart Farm Intelligence. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

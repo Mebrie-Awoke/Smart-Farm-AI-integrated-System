@@ -1,0 +1,78 @@
+{
+    "American Bollworm on Cotton": {
+        "advice": "Implement Integrated Pest Management (IPM). Use pheromone traps (5-10 per hectare) to monitor moth activity. If thresholds are exceeded (2-3 larvae per plant), spray Neem-based biopesticides or apply recommended insecticides like Chlorpyrifos or Indoxacarb. Encourage natural predators like Trichogramma wasps.",
+        "impact": "Highly destructive; larvae bore into bolls, squares, and flowers. A single larva can damage 30-40 bolls. Severe infestations lead to premature fruit drop and can reduce total yield by 40-50%, while also degrading fiber quality with secondary fungal infections."
+    },
+    "Anthracnose on Cotton": {
+        "advice": "Remove and burn all infected plant debris and bolls immediately to prevent spore spread. Treat delinted seeds with fungicides like Carbendazim or Thiram before planting. Apply foliar sprays of Mancozeb or Copper Oxychloride during the boll formation stage, especially during humid weather.",
+        "impact": "Causes reddish-brown sunken lesions on seedlings and bolls. Infected bolls often rot or burst prematurely, producing brittle, stained lint. Can lead to a 20% reduction in boll weight and significant degradation in market value due to fiber staining."
+    },
+    "Army worm": {
+        "advice": "Monitor fields daily, especially at night when larvae are active. Use 'push-pull' strategy with Desmodium and Napier grass. For chemical control, apply Emamectin Benzoate or Spinosad. Biological agents like Bacillus thuringiensis (Bt) are effective on young larvae. Ensure community-level synchronous planting.",
+        "impact": "Rapidly defoliates entire plants within days. Highly migratory and polyphagous, it can destroy entire fields of maize or rice if left untreated. Yield losses often range from 70% to 100% in local outbreaks due to total destruction of the whorl and growing points."
+    },
+    "Becterial Blight in Rice": {
+        "advice": "Use certified disease-free seeds and resistant varieties. Avoid excessive Nitrogen fertilization which favors the bacteria. Maintain proper field drainage and avoid wounding plants during cultivation. Apply Streptocycline or copper-based fungicides if symptoms (yellow wavy stripes on leaves) appear early.",
+        "impact": "Significant threat resulting in 20-60% yield loss. Causes wilting (kresek) in seedlings and leaf blight in older plants, leading to poor grain filling, lightweight grains, and brittle straw. Highly explosive under high humidity and strong winds."
+    },
+    "Brownspot": {
+        "advice": "Address underlying soil nutritional deficiencies, particularly Potassium. Treat seeds with fungicides like Carbendazim. Maintain consistent irrigation and improve soil drainage. Use slow-release Nitrogen fertilizers and incorporate crop residues only after thorough composting.",
+        "impact": "Typically indicates poor soil fertility. Causes oval, dark-brown spots with yellow halos on leaves, reducing photosynthetic area. Can result in 5-45% yield loss, reduced grain weight, and poor milling quality. Historically linked to major famines due to its impact on staple production."
+    },
+    "Common_Rust": {
+        "advice": "Plant resistant maize hybrids as the primary defense. Monitor weather; cool, humid conditions favor spread. If more than 5-10% of leaf area is covered by red-brick pustules before silking, apply foliar fungicides like Pyraclostrobin or Tebuconazole. Rotate with non-grass crops.",
+        "impact": "Reduces functional leaf area, leading to poor kernel fill and weakened stalks (increasing lodging risk). While often considered minor, severe early-season infections can cause 10-25% yield loss, particularly in sweet corn or seed production fields."
+    },
+    "Cotton Aphid": {
+        "advice": "Conserve natural enemies like ladybugs, lacewings, and hoverflies by avoiding broad-spectrum insecticides. Use yellow sticky traps for monitoring. If population explodes, spray Imidacloprid or Acetamiprid. Manage weed hosts around the field and avoid over-fertilizing with Nitrogen.",
+        "impact": "Sucks sap, causing leaf curling and stunting. Secretes sticky 'honeydew' that promotes black sooty mold growth, blocking sunlight. In late season, honeydew contaminates lint, creating 'sticky cotton' which is difficult to process and carries a heavy price penalty."
+    },
+    "Flag Smut": {
+        "advice": "Treat all seeds with systemic fungicides like Carboxin or Tebuconazole. Practice crop rotation with non-cereal crops for at least 2 years. Sow seeds shallowly (under 2cm) in cool soils. Avoid moving soil or equipment from infected fields to clean ones.",
+        "impact": "Causes long black streaks on leaves and sheaths, releasing sooty spores. Infected plants are severely stunted and rarely produce grain-bearing heads. Can cause localized losses of 5-20% and often triggers strict international quarantine restrictions on grain movement."
+    },
+    "Gray_Leaf_Spot": {
+        "advice": "Select maize hybrids with high resistance scores. Rotate crops for at least 2 years to allow residue decomposition. Practice conservation tillage to manage infected debris, but avoid continuous no-till in high-risk areas. Apply fungicides at tasseling stage if weather is warm and humid.",
+        "impact": "One of the most globally significant maize diseases. Rectangular gray lesions coalesce to blight entire leaves, leading to premature plant death. Can cause devastating yield losses of up to 50% through reduced test weight and increased stalk rot."
+    },
+    "Healthy Maize": {
+        "advice": "The crop appears healthy! Maintain your current irrigation and fertilization schedule. Continue scouting for pests like Fall Armyworm weekly. Ensure good weed control to prevent competition for nutrients.",
+        "impact": "Crop is in excellent condition. Potential for 100% expected yield if current management practices are maintained."
+    },
+    "Healthy Wheat": {
+        "advice": "Your wheat crop is looking strong. Ensure adequate moisture during the critical heading and grain-filling stages. Monitor for any signs of rust on the leaves or stems after rain events.",
+        "impact": "Crop is healthy and thriving. Potential for 100% expected yield with proper continued care."
+    },
+    "Healthy cotton": {
+        "advice": "Cotton plants are healthy. Continue to monitor for bollworm and whitefly activity, especially during the flowering stage. Maintain balanced NPK application.",
+        "impact": "Crop is healthy. Potential for maximum yield and high-quality lint output."
+    },
+    "Rice Blast": {
+        "advice": "Plant resistant varieties adapted to your region. Avoid excessive Nitrogen; use split applications instead. Maintain a consistent water level in the field. Treat seeds and apply fungicides like Tricyclazole or Azoxystrobin at the 'booting' stage to prevent neck blast.",
+        "impact": "The most destructive rice disease worldwide. Spindle-shaped leaf lesions can kill young plants. Neck blast is particularly devastating, cutting off nutrient flow to the panicle, often resulting in 100% yield loss in affected areas."
+    },
+    "Sugarcane Healthy": {
+        "advice": "Excellent sugarcane health. Continue with scheduled weeding and NPK application. Monitor for early shoot borer or top borer infestation in the coming weeks.",
+        "impact": "Crop is in optimal condition. High sugar content and biomass yield are expected."
+    },
+    "Tungro": {
+        "advice": "Focus strictly on preventing the spread by controlling the Green Leafhopper vector. Plant resistant varieties and synchronize planting dates with neighbors. Uproot and burn infected (stunted and yellow) plants immediately. Use insecticides like Thiamethoxam during the early growth stages.",
+        "impact": "A viral complex that causes extreme stunting and orange-yellow discoloration. Once infected, a plant cannot be cured. Can lead to total crop failure (70-100% loss) if infection occurs in the early vegetative stage."
+    },
+    "Wheat black rust": {
+        "advice": "Eradicate alternate hosts like barberry bushes near fields. Plant resistant varieties like 'Sonalika'. Apply foliar fungicides like Tebuconazole or Propiconazole at the first sign of reddish-brown pustules on stems. Avoid excessive Nitrogen which promotes lush, susceptible growth.",
+        "impact": "Extremely dangerous 'shifty' pathogen. Reddish-brown pustules burst through stems, causing lodging and shriveled grains. Under favorable conditions, it can destroy a healthy field in weeks, reducing yields by 50-70% and threatening regional food security."
+    },
+    "Wilt": {
+        "advice": "Ensure excellent field drainage to prevent waterlogging. Treat seeds and soil with Trichoderma viride or other biocontrol agents. Practice long-term crop rotation with non-host crops (like cereals). Use resistant cotton or pulse varieties. Solarize soil in high-risk areas if possible.",
+        "impact": "Soil-borne pathogen that blocks the plant's vascular system, causing sudden wilting and 'bronzing' of leaves. Usually leads to total plant death. Can reduce field-wide yields by 20-50% and persists in the soil for many years."
+    },
+    "Maize Fall Armyworm": {
+        "advice": "Scout the whorls of at least 20 consecutive plants across 5 locations weekly. Use botanical extracts like Neem or apply Emamectin Benzoate early. Practice 'push-pull' technology. Hand-pick egg masses and larvae in small plots. Apply sand or wood ash to whorls to deter feeding.",
+        "impact": "Devastating invasive pest. Larvae feed deep in the whorl and on developing ears. Can cause 20-50% yield loss in maize and also attacks sorghum, rice, and cotton. If uncontrolled, the 'window-pane' damage can quickly lead to total defoliation."
+    },
+    "Cotton Whitefly": {
+        "advice": "Avoid over-fertilizing with Nitrogen. Use yellow sticky traps (20-30 per hectare) for monitoring. Spray Diafenthiuron or Pyriproxyfen if threshold (6-8 adults per leaf) is met. Conserve natural enemies like Eretmocerus wasps. Manage weed hosts like Parthenium around fields.",
+        "impact": "Sucks sap leading to 'leaf curl' virus transmission and stunted growth. Like aphids, they secrete honeydew which leads to sooty mold, reducing photosynthesis and lint quality. Can reduce cotton yields by 15-30% and significantly increase management costs."
+    }
+}

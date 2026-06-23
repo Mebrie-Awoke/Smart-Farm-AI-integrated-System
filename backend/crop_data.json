@@ -1,0 +1,217 @@
+{
+    "rice": {
+        "scientific_name": "Oryza sativa",
+        "description": "Rice is the primary staple food for more than half the world's population. It is a grass species usually grown in flooded fields.",
+        "ideal_conditions": {
+            "climate": "Hot and humid climate with prolonged sunshine and an assured supply of water.",
+            "temperature": "20°C to 35°C",
+            "soil": "Clayey or clay-loams with good water retention.",
+            "rainfall": "Heavy rainfall (100cm+)"
+        },
+        "planting_tips": [
+            "Pre-germinate seeds before sowing in the nursery.",
+            "Transplant seedlings after 21-25 days.",
+            "Maintain standing water of 2-5 cm in the field during the early growth stage."
+        ],
+        "care_maintenance": [
+            "Apply Nitrogen, Phosphorus, and Potassium (NPK) in split doses.",
+            "Control weeds manually or using herbicides within the first 45 days.",
+            "Monitor for pests like Stem Borer and Brown Plant Hopper."
+        ],
+        "harvesting": "Harvest when the grain turns golden yellow and moisture content is around 20%.",
+        "diseases": ["Rice Blast", "Bacterial Leaf Blight", "Brown Spot"]
+    },
+    "maize": {
+        "scientific_name": "Zea mays",
+        "description": "Maize, or corn, is a cereal grain known as the 'Queen of Cereals' due to its high genetic yield potential.",
+        "ideal_conditions": {
+            "climate": "Warm weather; susceptible to frost.",
+            "temperature": "18°C to 27°C",
+            "soil": "Well-drained loamy or sandy loam soil rich in organic matter.",
+            "rainfall": "Moderate (50-100cm)"
+        },
+        "planting_tips": [
+            "Plant seeds 2-5 cm deep in rows.",
+            "Ensure proper spacing (60x20 cm) for adequate sunlight and air.",
+            "Best sown at the onset of monsoon or spring."
+        ],
+        "care_maintenance": [
+            "Maize is a heavy feeder; ensure adequate nitrogen supply.",
+            "Keep the field weed-free for the first 40 days.",
+            "Ensure moisture during flowering and grain filling stages."
+        ],
+        "harvesting": "Harvest when husks turn dry and brown, and kernels are hard.",
+        "diseases": ["Leaf Blight", "Downy Mildew", "Stalk Rot"]
+    },
+    "wheat": {
+        "scientific_name": "Triticum",
+        "description": "Wheat is a widespread cereal grain and a major source of vegetable protein worldwide.",
+        "ideal_conditions": {
+            "climate": "Cool and moist weather during growth, warm and dry during ripening.",
+            "temperature": "10°C to 25°C",
+            "soil": "Well-drained clay loam or loamy texture.",
+            "rainfall": "Moderate (50-75cm)"
+        },
+        "planting_tips": [
+            "Sow seeds 4-5 cm deep.",
+            "Treat seeds with fungicides before sowing to prevent soil-borne diseases.",
+            "Timely sowing is critical for optimal yield."
+        ],
+        "care_maintenance": [
+            "Apply irrigation at critical stages: Crown Root Initiation (CRI) and Flowering.",
+            "Use split application of urea.",
+            "Watch for termite attacks in dry areas."
+        ],
+        "harvesting": "Harvest when the grain hardens and straw turns golden and brittle.",
+        "diseases": ["Rusts (Yellow, Brown, Black)", "Loose Smut", "Powdery Mildew"]
+    },
+    "cotton": {
+        "scientific_name": "Gossypium",
+        "description": "Cotton is a soft, fluffy staple fiber and the most widely used natural fiber cloth in the world.",
+        "ideal_conditions": {
+            "climate": "Tropical and subtropical patterns; requires long frost-free periods.",
+            "temperature": "21°C to 30°C",
+            "soil": "Black cotton soil (regur) or well-drained alluvial soil.",
+            "rainfall": "Moderate (50-100cm)"
+        },
+        "planting_tips": [
+            "Sow seeds when soil temperature is above 15°C.",
+            "Maintain proper spacing to avoid overcrowding and humidity buildup.",
+            "Use pest-resistant varieties (like Bt Cotton) if available."
+        ],
+        "care_maintenance": [
+            "Thinning should be done to keep healthy plants.",
+            "Requires regular weeding and hoeing.",
+            "Manage pests like Bollworms and Aphids aggressively."
+        ],
+        "harvesting": "Pick cotton bolls when fully open and dry, preferably in the morning.",
+        "diseases": ["Bacterial Blight", "Cotton leaf curl virus", "Wilt"]
+    },
+    "sugarcane": {
+        "scientific_name": "Saccharum officinarum",
+        "description": "Sugarcane is a tall perennial grass used for sugar production.",
+        "ideal_conditions": {
+            "climate": "Hot and humid climate.",
+            "temperature": "20°C to 35°C",
+            "soil": "Deep, well-drained loams or heavy clays.",
+            "rainfall": "High (150cm+ or ample irrigation)"
+        },
+        "planting_tips": [
+            "Plant using stem cuttings (setts) with at least 3 buds.",
+            "Treat setts with fungicide before planting.",
+            "Deep furrow planting is recommended."
+        ],
+        "care_maintenance": [
+            "Heavy feeder; requires high Nitrogen and Potassium.",
+            "Earthing up is done to support the plant and prevent lodging.",
+            "Frequent irrigation is needed during the growing phase."
+        ],
+        "harvesting": "Harvest when cane matures (lower leaves dry up and juice Brix is high).",
+        "diseases": ["Red Rot", "Smut", "Wilt"]
+    },
+    "pulses": {
+        "scientific_name": "Fabaceae family",
+        "description": "Pulses (Lentils, Chickpeas, Beans) are distinct from vegetable crops and harvestable solely for the dry grain.",
+        "ideal_conditions": {
+            "climate": "Cool and dry climate for most varieties.",
+            "temperature": "15°C to 25°C",
+            "soil": "Light loamy or sandy soils with good drainage.",
+            "rainfall": "Low to Moderate (25-60cm)"
+        },
+        "planting_tips": [
+            "Rhizobium culture seed treatment increases nitrogen fixation.",
+            "Avoid waterlogging as pulses are sensitive to excess moisture."
+        ],
+        "care_maintenance": [
+            "Requires less nitrogen fixation but needs Phosphorus.",
+            "One or two irrigations during branching and pod development.",
+            "Protect from pod borers."
+        ],
+        "harvesting": "Harvest when pods turn brown and hard.",
+        "diseases": ["Wilt", "Root Rot", "Powdery Mildew"]
+    },
+    "millet": {
+        "scientific_name": "Pennisetum glaucum (Pearl Millet)",
+        "description": "Millets are coarse grains, highly nutritious and known as 'Nutri-Cereals'.",
+        "ideal_conditions": {
+            "climate": "Warm and dry climate; highly drought-resistant.",
+            "temperature": "25°C to 35°C",
+            "soil": "Sandy loam or shallow black soils; can grow in poor soils.",
+            "rainfall": "Low (25-60cm)"
+        },
+        "planting_tips": [
+            "Prepare fine seedbed.",
+            "Sow shallow (2-3 cm)."
+        ],
+        "care_maintenance": [
+            "Minimal fertilizer required compared to other cereals.",
+            "Thinning is necessary to maintain population.",
+            "Avoid water stagnation."
+        ],
+        "harvesting": "Harvest when earheads turn yellowish-brown.",
+        "diseases": ["Downy Mildew", "Ergot", "Smut"]
+    },
+    "potato": {
+        "scientific_name": "Solanum tuberosum",
+        "description": "Potato is a root vegetable and the fourth largest food crop.",
+        "ideal_conditions": {
+            "climate": "Cool growing season.",
+            "temperature": "15°C to 20°C for tuberization.",
+            "soil": "Loose, well-drained, sandy loam rich in organic matter.",
+            "rainfall": "Moderate irrigation required."
+        },
+        "planting_tips": [
+            "Use disease-free seed tubers.",
+            "Plant in ridges to allow tuber expansion."
+        ],
+        "care_maintenance": [
+            "Earthing up is essential to cover tubers and prevent greening.",
+            "Protect from Late Blight disease.",
+            "Stop irrigation 10 days before harvest."
+        ],
+        "harvesting": "Harvest when vines die back and skin of tuber hardens.",
+        "diseases": ["Late Blight", "Early Blight", "Scab"]
+    },
+    "tomato": {
+        "scientific_name": "Solanum lycopersicum",
+        "description": "Tomato is an edible berry of the plant Solanum lycopersicum.",
+        "ideal_conditions": {
+            "climate": "Warm season crop; cannot withstand frost.",
+            "temperature": "20°C to 25°C",
+            "soil": "Well-drained sandy loam with pH 6.0-7.0.",
+            "rainfall": "Regular moisture required."
+        },
+        "planting_tips": [
+            "Transplant seedlings when they have 4-5 true leaves.",
+            "Stake tall varieties (indeterminate) for support."
+        ],
+        "care_maintenance": [
+            "Mulching helps retain moisture and control weeds.",
+            "Consistent watering prevents Blossom End Rot.",
+            "Prune suckers to encourage fruit growth."
+        ],
+        "harvesting": "Harvest at breaker or red ripe stage depending on market distance.",
+        "diseases": ["Bacterial Wilt", "Early Blight", "Leaf Curl"]
+    },
+    "barley": {
+        "scientific_name": "Hordeum vulgare",
+        "description": "Barley is a major cereal grain grown in temperate climates globally.",
+        "ideal_conditions": {
+            "climate": "Cool climate similar to wheat.",
+            "temperature": "12°C to 25°C",
+            "soil": "Sandy loam to saline-sodic soils (salt tolerant).",
+            "rainfall": "Low to Moderate."
+        },
+        "planting_tips": [
+            "Often grown as a rabi (winter) crop in India.",
+            "Prepare land to fine tilth."
+        ],
+        "care_maintenance": [
+            "Needs nitrogen for vegetative growth.",
+            "Sensitive to waterlogging.",
+            "Requires 2-3 irrigations."
+        ],
+        "harvesting": "Harvest when moisture content is < 14%.",
+        "diseases": ["Rust", "Loose Smut", "Stripe Mosaic"]
+    }
+}

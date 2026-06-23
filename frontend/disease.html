@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Analysis - Smart Farm</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-leaf"></i> Smart Farm</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommend.html">Recommend Crop</a></li>
+                <li><a href="/fertilizer.html">Fertilizer</a></li>
+                <li><a href="/yield.html">Crop Yield</a></li>
+                <li><a href="/disease.html">Disease</a></li>
+                <li><a href="/climate.html">Climate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="section-title-center reveal">
+            <h2>Disease Risk Analysis</h2>
+            <p>Upload an image of your plant leaf to detect diseases and get recommendations.</p>
+        </div>
+
+        <div class="form-container reveal">
+            <form id="disease-form" enctype="multipart/form-data">
+                <div class="form-group section-title-center">
+                    <label for="file-upload" class="upload-label">
+                        <i class="fas fa-camera fa-3x spinner-icon m-bottom-20"></i><br>
+                        <span>Click to Upload Plant Leaf Image</span>
+                    </label>
+                    <input id="file-upload" type="file" name="image" accept="image/*" style="display: none;"
+                        onchange="previewImage(event)">
+                </div>
+
+                <div class="section-title-center m-bottom-20">
+                    <img id="image-preview" src="#" alt="Image Preview" class="preview-img">
+                </div>
+
+                <button type="submit" class="btn-submit">Scan for Disease</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+
+        <!-- Example Disease Images (Moved to Bottom) -->
+        <div class="m-top-50 reveal">
+            <div class="section-title-center">
+                <h3><i class="fas fa-images"></i> Example Disease Images</h3>
+            </div>
+            <div id="disease-gallery" class="image-gallery"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Smart Farm</h3>
+                <p>Revolutionizing agriculture with AI-driven insights for better yields and sustainable farming.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="/recommend.html"><i class="fas fa-chevron-right"></i> Crop Recommendation</a></li>
+                    <li><a href="/fertilizer.html"><i class="fas fa-chevron-right"></i> Fertilizer Guide</a></li>
+                    <li><a href="/disease.html"><i class="fas fa-chevron-right"></i> Disease Detection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> mebrie824@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +251922545447</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Arat Kilo, Addis Ababa , Ethiopia</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Smart Farm Intelligence. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Load disease-specific images dynamically
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('/api/images/list');
+                const data = await response.json();
+
+                if (data.images) {
+                    // Filter for images with 'disease' in the name (case insensitive)
+                    const diseaseImages = data.images.filter(img =>
+                        img.name.toLowerCase().includes('disease')
+                    );
+
+                    if (diseaseImages.length > 0) {
+                        const galleryContainer = new ImageGallery('disease-gallery', diseaseImages);
+                    } else {
+                        document.getElementById('disease-gallery').innerHTML = '<p style="text-align:center;">No example images found.</p>';
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading images:', error);
+                document.getElementById('disease-gallery').innerHTML = '<p style="text-align:center; color: red;">Failed to load images.</p>';
+            }
+        });
+    </script>
+</body>
+
+</html>

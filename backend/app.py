@@ -14,7 +14,7 @@ IMAGE_DIR = os.path.join(BASE_DIR, "Images")
 # Fallback to absolute path if relative doesn't work
 if not os.path.exists(IMAGE_DIR):
     IMAGE_DIR = r"c:\Smart Farm\Images"
-
+  
 MODEL_DIR = "."
 DATA_DIR = "../data"
 

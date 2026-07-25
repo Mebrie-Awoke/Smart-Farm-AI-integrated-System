@@ -49,7 +49,7 @@ def load_models():
             disease_info = json.load(f)
             
         # Try loading Keras Disease Model
-        try:
+        try: 
             import tensorflow as tf
             model_path = os.path.join(MODEL_DIR, "disease_model.h5")
             if os.path.exists(model_path):

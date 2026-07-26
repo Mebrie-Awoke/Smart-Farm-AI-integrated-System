@@ -2,7 +2,7 @@
  
 A comprehensive AI-powered agricultural intelligence platform designed to help farmers make data-driven decisions for optimal crop production. This system leverages machine learning and deep learning models to provide intelligent recommendations for crop selection, fertilizer usage, yield prediction, and crop disease detection.
  
-## 🌟 Features  
+## 🌟 Features 
 
 ### 1. **Crop Recommendation System**
    - Recommends the best crop to plant based on:

@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template, send_from_directory
 import pandas as pd
-import pickle
+import pickle 
 import os 
 import json
 from flask_cors import CORS

@@ -15,7 +15,7 @@ IMAGE_DIR = os.path.join(BASE_DIR, "Images")
 if not os.path.exists(IMAGE_DIR):
     IMAGE_DIR = r"c:\Smart Farm\Images"
   
-MODEL_DIR = "."
+MODEL_DIR = "." 
 DATA_DIR = "../data"
 
 # Load Models (Lazy loading or global)

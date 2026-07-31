@@ -35,7 +35,7 @@ A comprehensive AI-powered agricultural intelligence platform designed to help f
      - Disease description and information
      - Treatment and prevention recommendations
 
-### 5. **Crop Cultivation Guide**
+### 5. **Crop Cultivation Guide**  
    - Searchable database of crop information
    - Detailed cultivation tips and best practices
    - Climate and soil requirements for different crops

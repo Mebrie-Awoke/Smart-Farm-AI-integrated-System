@@ -23,7 +23,7 @@ A comprehensive AI-powered agricultural intelligence platform designed to help f
      - Rainfall patterns
      - Soil quality index
      - Farm size
-     - Sunlight hours
+     - Sunlight hours 
      - Fertilizer application amount
    - Assists in production planning and resource allocation
 

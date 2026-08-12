@@ -67,7 +67,7 @@ def load_models():
         print(f"Error loading models: {e}")
 
 load_models()
-
+  
 @app.route('/')
 def home():
     return render_template('index.html')

@@ -6,7 +6,7 @@ import json
 from flask_cors import CORS 
         
 app = Flask(__name__, static_folder="../frontend/static", template_folder="../frontend") 
-CORS(app)       
+CORS(app)    
       
 # Image directory - adjust path based on project structure
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  

@@ -42,7 +42,7 @@ def load_models():
             le_crop = pickle.load(f)
         with open(os.path.join(MODEL_DIR, "le_rec_crop.pkl"), "rb") as f:
             le_rec_crop = pickle.load(f)
-        
+         
         # Load Disease Info Mapping
         with open(os.path.join(MODEL_DIR, "disease_info.json"), "r") as f:
             disease_info = json.load(f)

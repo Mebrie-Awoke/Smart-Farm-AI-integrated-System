@@ -111,7 +111,7 @@ def predict_fertilizer():
             crop_enc,
             float(data['nitrogen']),
             float(data['potassium']),
-            float(data['phosphorous'])
+            float(data['phosphorous']) 
         ]]
         
         prediction = fertilizer_model.predict(features)[0]

@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template, send_from_directory
 import pandas as pd
 import pickle  
 import os  
-import json
+import json  
 from flask_cors import CORS       
         
 app = Flask(__name__, static_folder="../frontend/static", template_folder="../frontend")

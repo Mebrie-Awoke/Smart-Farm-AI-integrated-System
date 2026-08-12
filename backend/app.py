@@ -96,7 +96,7 @@ def recommend_page():
 
 @app.route('/api/predict/fertilizer', methods=['POST'])
 def predict_fertilizer():
-    try:
+    try:  
         data = request.json
         # Input: Temparature, Humidity, Moisture, Soil Type, Crop Type, Nitrogen, Potassium, Phosphorous
         

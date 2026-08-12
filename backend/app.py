@@ -4,7 +4,7 @@ import pickle
 import os
 import json     
 from flask_cors import CORS    
-      
+        
 app = Flask(__name__, static_folder="../frontend/static", template_folder="../frontend")
 CORS(app)
  

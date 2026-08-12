@@ -25,7 +25,7 @@ crop_rec_model = None
 le_rec_crop = None
 disease_info = {}
 disease_model_keras = None
-class_indices = {}
+class_indices = {}  
 def load_models():
     global fertilizer_model, yield_model, crop_rec_model, disease_model, le_soil, le_crop, le_rec_crop, disease_info, disease_model_keras, class_indices
     try:
